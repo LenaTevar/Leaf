@@ -24,7 +24,7 @@ namespace Leaf.Controllers
             // Random rng = new Random();
             ArrayList myRecipes = new ArrayList();
 
-            using (Leaf.Datalayers.Recipe.DataLayer dl = new Leaf.Datalayers.Recipe.DataLayer((Leaf.Data.ConnectionDB.CENTER)Enum.Parse(typeof(Leaf.Data.ConnectionDB.CENTER), "LEAF_PRE")))
+            using (Leaf.Datalayers.Patient.DataLayer dl = new Leaf.Datalayers.Patient.DataLayer((Leaf.Data.ConnectionDB.CENTER)Enum.Parse(typeof(Leaf.Data.ConnectionDB.CENTER), "LEAF_PRE")))
             {
                 return dl.GetRecipes("user");
 

@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Diagnostics;
 
-namespace Leaf.Datalayers.Recipe
+namespace Leaf.Datalayers.Patient
 {
     public class DataLayer : Leaf.Data.DataLayerBase
     {
@@ -18,11 +18,11 @@ namespace Leaf.Datalayers.Recipe
 
         }
 
-        public DataTable GetRecipes(string user)
+        public DataTable GetPatients(string user)
         {
             try
             {
-                string sql = @"SELECT * FROM recipes";
+                string sql = @"SELECT * FROM patients";
 
                 return GetDataTable(sql, new Parameters("USUARI", DbType.String, user.ToLower()));
             }
